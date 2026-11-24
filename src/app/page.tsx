@@ -146,11 +146,11 @@ export default function HomePage() {
         <div className="mx-auto mt-5 flex max-w-5xl flex-wrap items-center justify-center gap-2 text-sm sm:justify-start">
           <span className="font-semibold text-[#60736a]">Popular routes</span>
           {[
-            ['Delhi', 'Jaipur'],
-            ['Jaipur', 'Delhi'],
-            ['Mumbai', 'Pune'],
-            ['Bengaluru', 'Mysuru'],
-            ['Chandigarh', 'Shimla'],
+            ['Siliguri', 'Darjeeling'],
+            ['Siliguri', 'Gangtok'],
+            ['Siliguri', 'Kalimpong'],
+            ['Siliguri', 'Kurseong'],
+            ['Kurseong', 'Sonada'],
           ].map(([from, to]) => (
             <button
               key={`${from}-${to}`}

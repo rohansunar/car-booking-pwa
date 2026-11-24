@@ -210,7 +210,7 @@ function AddVehicleForm({ onSave, onCancel }: { onSave: (vehicle: Vehicle) => vo
         <Field label="Vehicle details"><TextInput name="details" placeholder="AC, luggage space, model year…" /></Field>
         <div className="sm:col-span-2">
           <Field label="Routes (one per line, From → To)">
-            <textarea name="routes" required rows={3} placeholder={'Chandigarh → Shimla\nShimla → Manali'} className="mt-2 w-full rounded-xl border border-[#dce5de] bg-white px-3 py-2.5 text-sm font-normal outline-none placeholder:text-[#a3aea8] focus:border-[#6e9e7e] focus:ring-2 focus:ring-[#dbeadf]" />
+            <textarea name="routes" required rows={3} placeholder={'Siliguri → Darjeeling\nSiliguri → Gangtok'} className="mt-2 w-full rounded-xl border border-[#dce5de] bg-white px-3 py-2.5 text-sm font-normal outline-none placeholder:text-[#a3aea8] focus:border-[#6e9e7e] focus:ring-2 focus:ring-[#dbeadf]" />
           </Field>
         </div>
       </div>

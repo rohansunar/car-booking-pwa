@@ -1,8 +1,8 @@
 [
   {
     "id": "ride-101",
-    "from": "Delhi",
-    "to": "Jaipur",
+    "from": "Siliguri",
+    "to": "Darjeeling",
     "daysFromToday": 1,
     "departure": "06:30 AM",
     "arrival": "11:00 AM",
@@ -19,8 +19,8 @@
   },
   {
     "id": "ride-102",
-    "from": "Delhi",
-    "to": "Jaipur",
+    "from": "Siliguri",
+    "to": "Gangtok",
     "daysFromToday": 1,
     "departure": "08:15 AM",
     "arrival": "12:45 PM",
@@ -39,8 +39,8 @@
   },
   {
     "id": "ride-103",
-    "from": "Mumbai",
-    "to": "Pune",
+    "from": "Siliguri",
+    "to": "Kalimpong",
     "daysFromToday": 2,
     "departure": "07:00 AM",
     "arrival": "10:30 AM",
@@ -57,8 +57,8 @@
   },
   {
     "id": "ride-104",
-    "from": "Bengaluru",
-    "to": "Mysuru",
+    "from": "Siliguri",
+    "to": "Kurseong",
     "daysFromToday": 2,
     "departure": "09:00 AM",
     "arrival": "12:15 PM",
@@ -77,8 +77,8 @@
   },
   {
     "id": "ride-105",
-    "from": "Jaipur",
-    "to": "Delhi",
+    "from": "Darjeeling",
+    "to": "Siliguri",
     "daysFromToday": 4,
     "departure": "05:45 PM",
     "arrival": "10:15 PM",
@@ -105,8 +105,8 @@
   },
   {
     "id": "ride-106",
-    "from": "Pune",
-    "to": "Goa",
+    "from": "Kurseong",
+    "to": "Sonada",
     "daysFromToday": 5,
     "departure": "10:00 PM",
     "arrival": "07:00 AM",
@@ -127,8 +127,8 @@
   },
   {
     "id": "ride-107",
-    "from": "Chandigarh",
-    "to": "Shimla",
+    "from": "Gangtok",
+    "to": "Siliguri",
     "daysFromToday": 3,
     "departure": "07:30 AM",
     "arrival": "12:00 PM",
