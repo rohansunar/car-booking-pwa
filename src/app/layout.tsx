@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Car Seat Booking',
-  description: 'Book seats on cars, SUVs and 14-seater vehicles.',
+  title: 'RideBook — Find your way to the hills',
+  description: 'Find shared rides across Siliguri, Darjeeling, Gangtok and the Eastern Himalaya.',
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

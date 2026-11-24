@@ -22,5 +22,56 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.page-enter {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.page-enter-delayed {
+  animation: rise-in 800ms cubic-bezier(0.2, 0.75, 0.25, 1) 100ms both;
+}
+
+.page-enter-delayed-2 {
+  animation: rise-in 800ms cubic-bezier(0.2, 0.75, 0.25, 1) 180ms both;
+}
+
+.mountain-art::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent 48%, rgba(17, 57, 49, 0.08));
+  content: '';
+  pointer-events: none;
+}
+
+.route-dash::before {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, #d18a50 45%, transparent 45%);
+  background-position: left center;
+  background-repeat: repeat-x;
+  background-size: 8px 1px;
+  content: '';
+  transform-origin: left;
+  animation: route-draw 1.2s ease-out both;
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes route-draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

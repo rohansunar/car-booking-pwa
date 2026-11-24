@@ -11,6 +11,8 @@ type CheckoutDetailsProps = {
   ride: Ride
   seats: Seat[]
   date: string
+  pickupPoint: string
+  dropPoint: string
 }
 
 function formatPrice(price: number) {
@@ -31,7 +33,7 @@ function formatDate(date: string) {
   }).format(new Date(year, month - 1, day))
 }
 
-export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsProps) {
+export default function CheckoutDetails({ ride, seats, date, pickupPoint, dropPoint }: CheckoutDetailsProps) {
   const [bookingReference, setBookingReference] = useState<string | null>(null)
   const total = seats.reduce((sum, seat) => sum + seat.price, 0)
 
@@ -49,6 +51,9 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
       customerPhone: String(formData.get('phone') ?? ''),
       from: ride.from,
       to: ride.to,
+      pickupPoint,
+      dropPoint,
+      passengers: seats.length,
       date,
       departure: ride.departure,
       seats: seats.map((seat) => ({ seatId: seat.id, price: seat.price })),
@@ -68,16 +73,16 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
   }
 
   return (
-    <main className="min-h-screen bg-[#f5f7f4] px-5 py-8 text-[#18332c] sm:px-8 sm:py-12">
+    <main className="min-h-screen bg-[#f7f5ef] px-4 py-6 text-[#172b2a] sm:px-8 sm:py-12">
       <div className="mx-auto max-w-5xl">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-[#4c6d5c] hover:text-[#1d493d]">
           <span aria-hidden="true">←</span> Back to rides
         </Link>
 
-        <div className="mt-7 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#71917f]">Almost there</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Review your booking</h1>
-          <p className="mt-2 text-[#718078]">Check your trip and seat details before confirming.</p>
+        <div className="mt-6 max-w-2xl sm:mt-7">
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#b77c48]">Almost there</p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#173f3b] sm:text-4xl">Review your booking</h1>
+          <p className="mt-2 text-sm text-[#718078] sm:text-base">Check your trip and seat details before confirming.</p>
         </div>
 
         {bookingReference ? (
@@ -90,8 +95,8 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
             <Link href="/" className="mt-7 inline-flex rounded-xl bg-[#1d493d] px-5 py-3 font-semibold text-white hover:bg-[#28604f]">Return to rides</Link>
           </section>
         ) : (
-          <div className="mt-8 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-            <section className="rounded-3xl border border-[#e2e9e3] bg-white p-6 shadow-sm sm:p-8">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+            <section className="rounded-3xl border border-[#e4e5dc] bg-white p-4 shadow-sm sm:p-8">
               <div className="flex flex-wrap items-start justify-between gap-3 border-b border-[#edf0ed] pb-5">
                 <div>
                   <p className="text-sm font-medium text-[#718078]">{formatDate(date)}</p>
@@ -99,7 +104,7 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
                     {ride.from} <span className="text-[#8b9b92]">→</span> {ride.to}
                   </h2>
                 </div>
-                <span className="rounded-full bg-[#eff5f0] px-3 py-1.5 text-xs font-semibold text-[#4d705a]">
+                <span className="rounded-full bg-[#f2f5ef] px-3 py-1.5 text-[10px] font-semibold text-[#4d705a] sm:text-xs">
                   {ride.capacityIncludesDriver
                     ? `${ride.capacity}-seater`
                     : `${ride.capacity} passenger seats + driver`}{' '}
@@ -117,6 +122,17 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
                   <p className="text-xs font-bold uppercase tracking-wider text-[#91a097]">Arrival</p>
                   <p className="mt-1 font-semibold">{ride.arrival}</p>
                   <p className="text-sm text-[#718078]">{ride.to}</p>
+                </div>
+              </div>
+
+              <div className="grid gap-3 border-b border-[#edf0ed] py-4 sm:grid-cols-2 sm:py-5">
+                <div className="rounded-2xl bg-[#f7f7f2] p-3.5">
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.13em] text-[#829087]">Pickup point</p>
+                  <p className="mt-1.5 text-sm font-semibold text-[#294740]">{pickupPoint}</p>
+                </div>
+                <div className="rounded-2xl bg-[#f7f7f2] p-3.5">
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.13em] text-[#829087]">Drop-off point</p>
+                  <p className="mt-1.5 text-sm font-semibold text-[#294740]">{dropPoint}</p>
                 </div>
               </div>
 
@@ -138,7 +154,7 @@ export default function CheckoutDetails({ ride, seats, date }: CheckoutDetailsPr
               </div>
             </section>
 
-            <form onSubmit={handleSubmit} className="h-fit rounded-3xl border border-[#e2e9e3] bg-white p-6 shadow-sm sm:p-8">
+            <form onSubmit={handleSubmit} className="h-fit rounded-3xl border border-[#e4e5dc] bg-white p-4 shadow-sm sm:p-8">
               <h2 className="text-xl font-semibold">Passenger details</h2>
               <p className="mt-1 text-sm text-[#718078]">Who should this demo booking be for?</p>
 

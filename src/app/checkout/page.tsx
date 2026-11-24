@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import CheckoutDetails from '@/src/app/components/checkout-details'
 import rides from '@/src/data/rides.json'
+import { getRidePoints } from '@/src/lib/ride-points'
 
 export const instant = false
 
@@ -9,6 +10,9 @@ type CheckoutPageProps = {
     ride?: string | string[]
     seats?: string | string[]
     date?: string | string[]
+    passengers?: string | string[]
+    pickup?: string | string[]
+    drop?: string | string[]
   }>
 }
 
@@ -19,10 +23,13 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
     ? [...new Set(params.seats.split(',').filter(Boolean))]
     : []
   const date = typeof params.date === 'string' ? params.date : ''
+  const passengerCount = typeof params.passengers === 'string' ? Number(params.passengers) : 0
+  const pickupPoint = typeof params.pickup === 'string' ? params.pickup : ''
+  const dropPoint = typeof params.drop === 'string' ? params.drop : ''
   const ride = rides.find((candidate) => candidate.id === rideId)
   const seats = ride?.seats.filter((seat) => seat.available && seatIds.includes(seat.id)) ?? []
   const validDate = /^\d{4}-\d{2}-\d{2}$/.test(date)
-  const validSelection = ride && seatIds.length > 0 && seats.length === seatIds.length && validDate
+  const validSelection = ride && passengerCount > 0 && seatIds.length === passengerCount && seats.length === seatIds.length && validDate && getRidePoints(ride.from).includes(pickupPoint) && getRidePoints(ride.to).includes(dropPoint)
 
   if (!validSelection || !ride) {
     return (
@@ -36,5 +43,5 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
     )
   }
 
-  return <CheckoutDetails ride={ride} seats={seats} date={date} />
+  return <CheckoutDetails ride={ride} seats={seats} date={date} pickupPoint={pickupPoint} dropPoint={dropPoint} />
 }
