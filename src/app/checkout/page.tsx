@@ -2,6 +2,8 @@ import Link from 'next/link'
 import CheckoutDetails from '@/src/app/components/checkout-details'
 import rides from '@/src/data/rides.json'
 
+export const instant = false
+
 type CheckoutPageProps = {
   searchParams: Promise<{
     ride?: string | string[]
