@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ride-101",
+    "from": "Delhi",
+    "to": "Jaipur",
+    "daysFromToday": 1,
+    "departure": "06:30 AM",
+    "arrival": "11:00 AM",
+    "duration": "4h 30m",
+    "vehicle": "AC sedan",
+    "capacity": 5,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 850, "available": true },
+      { "id": "2A", "type": "Window", "price": 850, "available": true },
+      { "id": "2B", "type": "Middle", "price": 750, "available": false },
+      { "id": "2C", "type": "Window", "price": 700, "available": true }
+    ]
+  },
+  {
+    "id": "ride-102",
+    "from": "Delhi",
+    "to": "Jaipur",
+    "daysFromToday": 1,
+    "departure": "08:15 AM",
+    "arrival": "12:45 PM",
+    "duration": "4h 30m",
+    "vehicle": "Premium SUV",
+    "capacity": 7,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 1150, "available": true },
+      { "id": "2A", "type": "Window", "price": 1150, "available": true },
+      { "id": "2B", "type": "Middle", "price": 1050, "available": true },
+      { "id": "2C", "type": "Window", "price": 1000, "available": false },
+      { "id": "3A", "type": "Window", "price": 950, "available": true },
+      { "id": "3B", "type": "Window", "price": 900, "available": true }
+    ]
+  },
+  {
+    "id": "ride-103",
+    "from": "Mumbai",
+    "to": "Pune",
+    "daysFromToday": 2,
+    "departure": "07:00 AM",
+    "arrival": "10:30 AM",
+    "duration": "3h 30m",
+    "vehicle": "AC sedan",
+    "capacity": 5,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 680, "available": false },
+      { "id": "2A", "type": "Window", "price": 680, "available": true },
+      { "id": "2B", "type": "Middle", "price": 620, "available": false },
+      { "id": "2C", "type": "Window", "price": 580, "available": false }
+    ]
+  },
+  {
+    "id": "ride-104",
+    "from": "Bengaluru",
+    "to": "Mysuru",
+    "daysFromToday": 2,
+    "departure": "09:00 AM",
+    "arrival": "12:15 PM",
+    "duration": "3h 15m",
+    "vehicle": "Comfort SUV",
+    "capacity": 7,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 590, "available": true },
+      { "id": "2A", "type": "Window", "price": 590, "available": true },
+      { "id": "2B", "type": "Middle", "price": 540, "available": false },
+      { "id": "2C", "type": "Window", "price": 520, "available": false },
+      { "id": "3A", "type": "Window", "price": 500, "available": false },
+      { "id": "3B", "type": "Window", "price": 480, "available": false }
+    ]
+  },
+  {
+    "id": "ride-105",
+    "from": "Jaipur",
+    "to": "Delhi",
+    "daysFromToday": 4,
+    "departure": "05:45 PM",
+    "arrival": "10:15 PM",
+    "duration": "4h 30m",
+    "vehicle": "14-seat minibus",
+    "capacity": 14,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 830, "available": true },
+      { "id": "2A", "type": "Window", "price": 830, "available": true },
+      { "id": "2B", "type": "Middle", "price": 780, "available": true },
+      { "id": "2C", "type": "Window", "price": 780, "available": false },
+      { "id": "2D", "type": "Window", "price": 780, "available": false },
+      { "id": "3A", "type": "Window", "price": 780, "available": true },
+      { "id": "3B", "type": "Middle", "price": 730, "available": true },
+      { "id": "3C", "type": "Window", "price": 730, "available": true },
+      { "id": "4A", "type": "Window", "price": 730, "available": true },
+      { "id": "4B", "type": "Middle", "price": 680, "available": true },
+      { "id": "4C", "type": "Window", "price": 680, "available": true },
+      { "id": "5A", "type": "Window", "price": 680, "available": true },
+      { "id": "5B", "type": "Middle", "price": 650, "available": true },
+      { "id": "5C", "type": "Window", "price": 650, "available": true }
+    ]
+  },
+  {
+    "id": "ride-106",
+    "from": "Pune",
+    "to": "Goa",
+    "daysFromToday": 5,
+    "departure": "10:00 PM",
+    "arrival": "07:00 AM",
+    "duration": "9h",
+    "vehicle": "9-seat sleeper van",
+    "capacity": 9,
+    "capacityIncludesDriver": true,
+    "seats": [
+      { "id": "1A", "type": "Front passenger", "price": 1550, "available": true },
+      { "id": "2A", "type": "Window", "price": 1550, "available": true },
+      { "id": "2B", "type": "Middle", "price": 1450, "available": true },
+      { "id": "2C", "type": "Window", "price": 1450, "available": true },
+      { "id": "3A", "type": "Lower berth", "price": 1550, "available": true },
+      { "id": "3B", "type": "Upper berth", "price": 1450, "available": true },
+      { "id": "3C", "type": "Lower berth", "price": 1450, "available": true },
+      { "id": "3D", "type": "Upper berth", "price": 1350, "available": true }
+    ]
+  },
+  {
+    "id": "ride-107",
+    "from": "Chandigarh",
+    "to": "Shimla",
+    "daysFromToday": 3,
+    "departure": "07:30 AM",
+    "arrival": "12:00 PM",
+    "duration": "4h 30m",
+    "vehicle": "Hill share taxi",
+    "capacity": 10,
+    "capacityIncludesDriver": false,
+    "seats": [
+      { "id": "1A", "type": "Front window", "price": 1150, "available": true },
+      { "id": "1B", "type": "Front middle", "price": 1050, "available": true },
+      { "id": "2A", "type": "Window", "price": 1050, "available": true },
+      { "id": "2B", "type": "Middle", "price": 950, "available": true },
+      { "id": "2C", "type": "Middle", "price": 950, "available": false },
+      { "id": "2D", "type": "Window", "price": 1050, "available": true },
+      { "id": "3A", "type": "Window", "price": 950, "available": true },
+      { "id": "3B", "type": "Middle", "price": 850, "available": true },
+      { "id": "3C", "type": "Middle", "price": 850, "available": true },
+      { "id": "3D", "type": "Window", "price": 950, "available": true }
+    ]
+  }
+]
